@@ -1,13 +1,13 @@
 #include "base_converter.hpp"
 
 int main() {
-    int a;
+    int val;
     std::vector<bool> binary; 
 
     std::cout << ">";
-    std::cin >> a;
+    std::cin >> val;
 
-    binary = Converter::binary_converter(a);
+    binary = Converter::binary_converter(val);
 
     for(int b : binary) {
         std::cout << b;
