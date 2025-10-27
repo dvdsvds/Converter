@@ -20,9 +20,14 @@ namespace Converter {
         return result;
     }
 
-    std::vector<int> octal_converter(int num) {
-        std::vector<bool> binary = binary_converter(num);
-        std::vector<int> octal;
+    std::vector<int> octal_converter(std::vector<bool> binary) {
+        std::vector<int> _binary(binary.size());
+        std::transform(binary.begin(), binary.end(), _binary.begin(),
+                       [](bool b) {return b ? 1 : 0;});
 
+        std::vector<int> octal;
+        
+        
+        return octal;
     }
 }
