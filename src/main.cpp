@@ -9,10 +9,16 @@ int main() {
 
     binary = Converter::binary_converter(val);
 
+    int index = 0;
     for(int b : binary) {
         std::cout << b;
+        index++;
+        if(index % 8 == 0) std::cout << " ";
     }
+    std::cout << "(2)" << std::endl;
 
-    std::cout << std::endl;
+    std::vector<int> octal;
+
+
     return 0;
 }
