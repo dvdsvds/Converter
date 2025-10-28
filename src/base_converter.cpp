@@ -33,7 +33,7 @@ namespace Converter {
 
         for(int i = 0; i < octal.size(); i++) {
             for(auto it = octal[i].first; it != octal[i].second; ++it) {
-                
+                        
             }
         }
         std::reverse(octal.begin(), octal.end());
