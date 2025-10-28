@@ -8,5 +8,5 @@
 
 namespace Converter {
     std::vector<bool> binary_converter(int num);
-    std::vector<int> octal_converter(std::vector<bool> binary);
+    std::vector<std::pair<std::vector<bool>::iterator, std::vector<bool>::iterator>> octal_converter(std::vector<bool>& binary);
 }

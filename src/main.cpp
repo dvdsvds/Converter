@@ -17,17 +17,25 @@ int main() {
     }
     std::cout << "(2)" << std::endl;
 
-    std::vector<int> octal = Converter::octal_converter(binary);
+    auto octal = Converter::octal_converter(binary);
 
-    int octal_size = 0;
-    for(int o : octal) {
-        std::cout << o;
-        octal_size++;
-        if(octal_size % 8 == 0) std::cout << " ";
+    int i = 0;
+    auto range = octal[i];
+
+    std::cout << "Group " << i << ": ";
+    for (auto it = range.first; it != range.second; ++it) {
+        std::cout << *it;
+    }
+
+    std::cout << std::endl;
+
+    for(int i = 0; i < octal.size(); i++) {
+        for(auto it = octal[i].first; it != octal[i].second; ++it) {
+            std::cout << *it;
+        }
     }
 
     std::cout << "(8)" << std::endl;
-
 
     return 0;
 }
